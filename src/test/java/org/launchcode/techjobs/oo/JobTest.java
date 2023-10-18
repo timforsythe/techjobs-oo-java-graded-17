@@ -24,19 +24,19 @@ public class JobTest {
                 new PositionType("Quality control"),
                 new CoreCompetency("Persistence"));
 
-        assertNotNull(job.getName());
+        assertTrue(job.getName() instanceof String);
         assertEquals("Product tester", job.getName());
 
-        assertNotNull(job.getEmployer());
+        assertTrue(job.getEmployer() instanceof Employer);
         assertEquals("ACME", job.getEmployer().getValue());
 
-        assertNotNull(job.getLocation());
+        assertTrue(job.getLocation() instanceof Location);
         assertEquals("Desert", job.getLocation().getValue());
 
-        assertNotNull(job.getPositionType());
+        assertTrue(job.getPositionType() instanceof PositionType);
         assertEquals("Quality control", job.getPositionType().getValue());
 
-        assertNotNull(job.getCoreCompetency());
+        assertTrue(job.getCoreCompetency() instanceof CoreCompetency);
         assertEquals("Persistence", job.getCoreCompetency().getValue());
     }
 
